@@ -38,6 +38,12 @@
         background:url(../images/Botw-Background.png);
     }
 
+    .color-rectangle {
+        width: 100%; /* Full width */
+        height: 100px; /* Height of the rectangle */
+        background-color: #536F50; /* Choose your desired color */
+    }
+    
     .grid {
         display: grid;
         grid-template-columns: repeat(6, 1fr); /* Creates 6 columns */
