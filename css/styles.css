@@ -1,0 +1,55 @@
+/* fonts */
+@font-face {
+    font-family: 'AlegreyaRegular';
+    src: url('../fonts/The-Wild-Breath-Of-Zelda') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*body {
+    margin: 40px;
+  }
+  
+  .button {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  
+  .box:nth-child(even) {
+    background-color: #ccc;
+    color: #000;
+  }
+  
+    .buttons {
+      width: 600px;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(6, 100px);
+    }
+
+    .buttons img {
+        width: 300px;
+        height: 300px;
+    } */
+    body {
+        background:url(../images/Botw-Background.png);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); /* Creates 6 columns */
+        grid-gap: 10px; /* Adjust as needed for spacing between images */
+      }
+      
+      .grid-item {
+        width: 100%; /* Ensure each grid item takes up full width of its column */
+      }
+      
+      .grid-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
