@@ -63,8 +63,12 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
+    transition: transform .5s;
 }
 
+.grid-item img:hover{
+    transform: scale(1.2);
+  }
 .birthday {
     text-align: center;
 }
