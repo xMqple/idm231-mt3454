@@ -1,7 +1,7 @@
 # Legend of Zelda Breath of the Wild Characters Zodiacs
 
 ## Aries
-You are Daruk! A very ambitious individual who becoms wildly excitable when in battle. Although he's usually very calm, he becomes very loud and ferocious when fighting. He is very courageous when it comes protecting the ones you love and extremely strong! 
+You are Daruk! A very ambitious individual who becomes wildly excitable when in battle. Although he's usually very calm, he becomes very loud and ferocious when fighting. He is very courageous when it comes protecting the ones you love and extremely strong! 
 
 ## Taurus
 You are Hestu! He had a very strong passion for music and dancing when it suits him, often seen using his maracas and chanting. He can be absent-minded at times, which results in him having a habit of getting lost and often a target of the Koroks' pranks.

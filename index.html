@@ -30,11 +30,23 @@
 
     <div class="grid">
         <div class="grid-item">
-            <img id="aries" class="button" src="images/Daruk-Botw.png" alt="Daruk">>
+            <button class="button open-button">
+                <img src="images/Daruk-Botw.png" alt="Daruk">
+            </button>
+            <!-- Modal content -->
+            <dialog class="modal" id="modal">
+                <h2>You are Daruk!</h2>
+                <img src="images/Daruk-Botw.png" alt="Daruk">
+                <p> A very ambitious individual who becomes wildly excitable when in battle. Although he's usually very calm, he becomes very loud and ferocious when fighting. He is very courageous when it comes protecting the ones you love and extremely strong! </p> 
+                <button class="button close-button">close modal</button>
+            </dialog>
         </div>
+
         <div class="grid-item">
             <img id="taurus" class="button" src="images/Hestu-Botw.png" alt="Hestu">
         </div>
+
+
         <div class="grid-item">
             <img id="gemini" class="button" src="images/Revali-Botw.png" alt="Revali">
         </div>
@@ -67,6 +79,18 @@
         </div>
       </div>
 
+      <dialog class="modal" id="modal">
+        <h2>An interesting title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+        <button class="button close-button">close modal</button>
+        <form class="form" method="dialog">
+          <label>Your name <input type="text"></label>
+          <label>Your email <input type="email"></label>
+          <button class="button" type="submit">submit form</button>
+        </form>
+      
+      </dialog>
     <script src="js/main.js"></script>
 </body>
 </html>

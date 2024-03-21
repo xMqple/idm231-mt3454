@@ -75,7 +75,7 @@ if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
     astrological_sign = 'Aquarius'
   }
 
-
+// form
   const audio_player = document.getElementById('audio_player');
 
   function play_audio(audio_element, src) {
@@ -150,3 +150,17 @@ function handle_submit(event) {
 if (form) {
   form.addEventListener('submit', handle_submit, false);
 }
+
+
+// modal
+const modal = document.querySelector("#modal");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});
