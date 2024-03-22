@@ -136,9 +136,9 @@ h2 {
   justify-content: center;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
   position: fixed;
-  /*opacity: 0;
-  pointer-events: none;*/
+  opacity: 0;
   top: 0;
   left: 0;
   height: 100vh;
@@ -158,6 +158,7 @@ h2 {
 .modal h1 {
   margin: 0;
 }
+
 .modal-container img {
   display: block;
   margin-left: auto;
@@ -173,160 +174,72 @@ button#close {
   padding: 10px 25px;
 }
 
-/*.modal {
-    padding: 1em;
-    max-width: 50ch;
-    border: 0;
-    color:#536F50
-  
-    & > * {
-      margin: 0 0 0.5rem 0;
-    }
-  }
-  
-  .modal::backdrop {
-    background: var(--main-color);
-  }
+.close-btn button:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
 
-  .modal img {
-    width: 500px;
-    height: 500px;
-  } */
-  
-  /* extra styling */
-  
-  /*body {
-    min-height: 100vh;
-    margin: 2rem;
-    font-family: system-ui;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: var(--gray-8);
 
-  }*/
-  
-  p + .button {
-    border: 0;
-    cursor: pointer;
-    background: var(--gray-8);
-    color: var(--gray-2);
-    font-weight: 700;
-    padding: var(--size-2) var(--size-4);
-  }
-  
-  .button:hover,
-  .button:focus {
-    background: var(--cyan-9);
-  }
+  /* Help button */
+  .help-btn { 
+    padding: 5px;
+    position:fixed;
+    right:30px;
+    top:30px;
+}
 
-  .cards a{
-    color: rgb(47, 137, 255); /* Set text color */
-    display: flex;
-    font-size: 0.8rem; /* Set font size */
-    margin:0;
-    justify-content: center; /* Center horizontally */
-    background-color: antiquewhite;
-    border-radius: 20px;
-  }
-  
-  .cards{
-      display: none;
-      width: 25vw;
-      height: fit-content;
-      margin: 10px auto;
-      padding:30px;
-      border-radius: 25px;
-      z-index: 999; 
-      position: fixed; 
-      top: 50%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
-/*.character-preview {
+.help-btn button { 
+  background-color: var(--accent-color2);
+  border-radius: 50px;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border: 5px solid var(--accent-color2);
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.help-modal-cont { 
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.character-preview .preview{
-  display: none;
-  padding: 2rem;
-  text-align: center;
+.help-modal {
   background-color: var(--main-color);
-  position: relative;  
-  margin: 2rem;
-  width: 40rem;
-}
-
-.character-preview .preview.active {
-  display: inline-block;
-}
-
-.character-preview .preview img {
-  height: 30rem;
-}
-  button.help-btn {
-    width: auto;
-    height: 10vw;
-    margin-top: -50px;
-  }
- 
-.help-popup{
-    background-color: aliceblue;
-    width: 25vw;
-    padding: 25px;
-    height: fit-content;
-    margin: 10px auto;
-    border-radius: 25px;
-    z-index: 900;
-    position: fixed;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    display: none;
-}
-
-.help-popup p{
-  width: 25vw;
-  text-indent: 0;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 600px;
+  max-width: 100%;
   text-align: center;
-  margin: 20px auto;
 }
 
-.help-header{
-  display: flex;
-  justify-content: center;
+.help-modal h1 {
   margin: 0;
-  font-family: sans-serif;
 }
 
-.help-content{
-  margin-top: 50px;
+.help-btn button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
-button.help-btn {
-  width: auto;
-  height: 10vw;
-  margin-top: -50px;
+.help-modal-cont.show { 
+  opacity:1;
+  pointer-events: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
 }
-
-.help-popup{
-  background-color: aliceblue;
-  width: 25vw;
-  padding: 25px;
-  height: fit-content;
-  margin: 10px auto;
-  border-radius: 25px;
-  z-index: 900;
-  position: fixed;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  display: none;
-} */
