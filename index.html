@@ -7,23 +7,30 @@
     <title>Signs of the Zodiac</title>
 </head>
 <body>
+    
     <div class="header">
-        <button class="help-btn hover"><img src="images/help-button.png" alt="help"></button>
+        <!-- Help Button at the top of the page -->
+        <div class="help-btn" id= "help_btn">
+            <button id="open">
+                ?
+            </button>
+        </div>
+        <!-- Header Rectangle -->
         <div class="color-rectangle">
             What Breath of The Wild Character are You?
         </div>
     </div>
 
-    <div class="help-popup">
-        <img class="esc-btn hover" src="images/close-button.png" alt="close button">
-        <div class="help-content">
-            <h1 class="help-header">Information</h1>
-            <p> Put in your birthday into the selection below!</p>
-            <p> Hit submit and read what character you got!</p>
-            <p> Or you may click on the images to see the info </p>
+    <div class="help-modal-cont" id="help_modal_cont">
+        <div class = "help-modal">
+                <h1 class="help-header">Information</h1>
+                <p> Put in your birthday into the selection below!</p>
+                <p> Hit submit and read what character you got!</p>
+                <p> Or you may click on the images to see the information. </p>
         </div>
-    </div>
+    </div> 
 
+    <!-- calendar -->
     <section class = "form-entry">
         <form>
           <div class="control">
@@ -51,58 +58,81 @@
         </div> --> 
 
     <div class="grid">
-        <div class="grid-item">
-                <img id="aries" class="button" src="images/daruk-botw.png" alt="Daruk">
-        </div>
-        <div class="grid-item">
-                <img id="taurus" class="button" src="images/hestu-botw.png" alt="Hestu">
-        </div>
-        <div class="grid-item">
-                <img id="gemini" class="button" src="images/revali-botw.png" alt="Revali">
-        </div>
-        <div class="grid-item">
-                <img id="cancer" class="button" src="images/mipha-botw.png" alt="Mipha">
-        </div>
-        <div class="grid-item">
-                <img id="leo" class="button" src="images/urbosa-botw.png" alt="Urbosa">
-        </div>
-        <div class="grid-item">
-                <img id="virgo" class="button" src="images/zelda-botw.png" alt="Zelda">
-        </div>
-        <div class="grid-item">
-                <img id="libra" class="button" src="images/impa-botw.png" alt="Impa">
-        </div>
-        <div class="grid-item">
-                <img id="scorpio" class="button" src="images/riju-botw.png" alt="Riju">
-        </div>
-        <div class="grid-item">
-                <img id="sagittarius" class="button" src="images/sidon-botw.png" alt="Sidon">
-        </div>
-        <div class="grid-item">
-                <img id="capricorn" class="button" src="images/link-botw.png" alt="Link">
-        </div>
-        <div class="grid-item">
-                <img id="aquarius" class="button" src="images/robbie-botw.png" alt="Robbie">
-        </div>
-        <div class="grid-item">
-                <img id="pisces" class="button" src="images/purah-botw.png" alt="Purah">
-        </div>
+        <button class = "open-btn" id="daruk">
+            <div class="grid-item">
+                <img src="images/daruk-botw.png" alt="Daruk">
+            </div>
+        </button>
+        <button class = "open-btn" id="hestu">
+            <div class="grid-item">
+                    <img src="images/hestu-botw.png" alt="Hestu">
+            </div>
+        </button>
+        <button class = "open-btn" id="revali">
+            <div class="grid-item">
+                    <img src="images/revali-botw.png" alt="Revali">
+            </div>
+        </button>
+        <button class = "open-btn" id="mipha">
+            <div class="grid-item">
+                    <img src="images/mipha-botw.png" alt="Mipha">
+            </div>
+        </button>
+        <button class = "open-btn" id="urbosa">
+            <div class="grid-item">
+                    <img src="images/urbosa-botw.png" alt="Urbosa">
+            </div>
+        </button>
+        <button class = "open-btn" id="zelda">
+            <div class="grid-item">
+                <img src="images/zelda-botw.png" alt="Zelda">
+            </div>
+        </button>
+        <button class = "open-btn" id="impa">
+            <div class="grid-item">
+                <img src="images/impa-botw.png" alt="Impa">
+            </div>
+        </button>
+        <button class = "open-btn" id="riju">
+            <div class="grid-item">
+                    <img  src="images/riju-botw.png" alt="Riju">
+            </div>
+        </button>
+        <button class = "open-btn" id="sidon">
+            <div class="grid-item">
+                    <img src="images/sidon-botw.png" alt="Sidon">
+            </div>
+        </button>
+        <button class = "open-btn" id="link">
+            <div class="grid-item">
+                    <img src="images/link-botw.png" alt="Link">
+            </div>
+        </button>
+        <button class = "open-btn" id="robbie">
+            <div class="grid-item">
+                    <img src="images/robbie-botw.png" alt="Robbie">
+            </div>
+        </button>
+        <button class = "open-btn" id="purah">
+            <div class="grid-item">
+                <img  src="images/purah-botw.png" alt="Purah">
+            </div>
+        </button>
       </div>
 
+      <!-- Modal -->
       <div class = "modal-container" id="modal_container">
         <div class = "modal">
-            <h1 class="popup-header">Daruk</h1>
-            <audio id="daruk-audio">
-                <source src="audio/daruk.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <img src="images/daruk-botw.png" class="char-img" alt="Daruk Image">
-            <p> 
-                You are Daruk! A very ambitious individual who becomes wildly excitable when in battle. 
-                Although he's usually very calm, he becomes very loud and ferocious when fighting. 
-                He is very courageous when it comes protecting the ones you love and extremely strong!
-            </p>
-            <button id= "close"> 
+            <audio class="character-audio" id="audio"> </audio>
+            <img class="modal-img" src="." alt="Custom Character Image">
+            <div class = "modal-txt">
+                <h1>Character Name</h1>
+                <h3> Date </h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ut sed nesciunt quibusdam, suscipit expedita voluptatum voluptatibus provident, porro assumenda perferendis dolorem ipsa culpa maiores reiciendis corporis nulla! Doloribus, laboriosam!
+                </p>
+            </div>
+            <button class = "close-btn"> 
                 Close Me
             </button>
         </div>
