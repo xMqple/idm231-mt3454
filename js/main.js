@@ -1,4 +1,4 @@
-const zodiac_info = [
+/*const zodiac_info = [
     {name: 'Aries',
     dates: 'March 21 - April 19',
     text: 'You are Daruk! A very ambitious individual who becoms wildly excitable when in battle. Although he is usually very calm, he becomes very loud and ferocious when fighting. He is very courageous when it comes protecting the ones you love and extremely strong!'
@@ -163,4 +163,121 @@ openModal.addEventListener("click", () => {
 
 closeModal.addEventListener("click", () => {
   modal.close();
+}); */
+
+/* Help Button Popup */
+ 
+
+/*document.addEventListener("DOMContentLoaded", function() {
+  const helpBtn = document.querySelector('.help-btn');
+  const helpPopup = document.querySelector('.help-popup');
+  const closeBtn = document.querySelector('.esc-btn');
+
+  helpBtn.addEventListener('click', function() {
+    if (helpPopup.style.display === 'block') {
+      helpPopup.style.display = 'none';
+    } else {
+      helpPopup.style.display = 'block';
+    }
+  });
+
+  closeBtn.addEventListener('click', function() {
+    helpPopup.style.display = 'none'; 
+  });
+}); */
+document.addEventListener("DOMContentLoaded", function() {
+  const helpBtn = document.querySelector('.help-btn');
+  const helpPopup = document.querySelector('.help-popup');
+  const closeBtn = document.querySelector('.esc-btn');
+
+  helpBtn.addEventListener('click', function() {
+    if (helpPopup.style.display === 'block') {
+      helpPopup.style.display = 'none';
+    } else {
+      helpPopup.style.display = 'block';
+    }
+  });
+
+  closeBtn.addEventListener('click', function() {
+    helpPopup.style.display = 'none'; 
+  });
 });
+
+
+function handle_submit(event) {
+  event.preventDefault();
+  const birthdayInput = document.getElementById('birthdayInput');
+  const birthdayValue = birthdayInput.value;
+  console.log('Birthday inputted:', birthdayValue);
+  
+  const date = new Date(birthdayValue);
+  const month = date.getMonth() + 1; 
+  const day = date.getDate(); 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const card = [
+    { buttonId: 'aries', cardClass: '.daruk', audioId: 'daruk-audio' },
+    { buttonId: 'taurus', cardClass: '.hestu', audioId: 'hestu-audio' },
+    { buttonId: 'gemini', cardClass: '.revali', audioId: 'revali-audio' },
+    { buttonId: 'cancer', cardClass: '.mipha', audioId: 'mipha-audio'},
+    { buttonId: 'leo', cardClass: '.urbosa', audioId: 'urboa-audio'},
+    { buttonId: 'virgo', cardClass: '.zelda', audioId: 'zelda-audio'},
+    { buttonId: 'libra', cardClass: '.impa', audioId: 'impa-audio'},
+    { buttonId: 'scorpio', cardClass: '.riju', audioId: 'riju-audio'},
+    { buttonId: 'sagittarius', cardClass: '.sidon', audioId: 'sidon-audio'},
+    { buttonId: 'capricorn', cardClass: '.link', audioId: 'link-audio'},
+    { buttonId: 'aquarius', cardClass: '.robbie', audioId: 'robbie-audio'},
+    { buttonId: 'pisces', cardClass: '.purah', audioId: 'purah-audio'},
+  ];
+
+  card.forEach(card => {
+    const button = document.getElementById(card.buttonId);
+    const cardElement = document.querySelector(card.cardClass);
+    const audio = document.getElementById(card.audioId);
+
+    button.addEventListener("click", function() {
+      document.querySelectorAll('.cards').forEach(c => {
+        if (c !== cardElement && c.style.display === 'block') {
+          c.style.display = 'none';
+          const audio = c.querySelector('audio');
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+
+      if (cardElement.style.display === 'none' || cardElement.style.display === '') {
+        cardElement.style.display = 'block';
+        audio.play();
+      } else {
+        cardElement.style.display = 'none';
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+
+    const playButton = document.getElementById(card.buttonId);
+    playButton.addEventListener("mousedown", () => {
+      audio.play();
+    });
+  });
+// make esc button work
+  const escButtons = document.querySelectorAll('.esc-btn');
+  function hideCards() {
+    document.querySelectorAll('.cards').forEach(card => {
+      card.style.display = 'none';
+      const audio = card.querySelector('audio');
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  }
+
+  escButtons.forEach(escButton => {
+    escButton.addEventListener("click", hideCards);
+  });
+});
+
+
+
+const open = document.getElementById('open')
+const modal_container = document.getElementById('modal_container')
+const close = document.getElementById('close')

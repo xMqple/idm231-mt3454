@@ -8,11 +8,22 @@
 </head>
 <body>
     <div class="header">
+        <button class="help-btn hover"><img src="images/help-button.png" alt="help"></button>
         <div class="color-rectangle">
             What Breath of The Wild Character are You?
         </div>
     </div>
- 
+
+    <div class="help-popup">
+        <img class="esc-btn hover" src="images/close-button.png" alt="close button">
+        <div class="help-content">
+            <h1 class="help-header">Information</h1>
+            <p> Put in your birthday into the selection below!</p>
+            <p> Hit submit and read what character you got!</p>
+            <p> Or you may click on the images to see the info </p>
+        </div>
+    </div>
+
     <section class = "form-entry">
         <form>
           <div class="control">
@@ -28,58 +39,295 @@
         </form>
     </section>
 
-    <div class="grid">
-        <div class="grid-item">
-            <button class="button open-button">
-                <img src="images/Daruk-Botw.png" alt="Daruk">
-            </button>
-            <!-- Modal content -->
-            <dialog class="modal" id="modal">
+
+    
+            
+        <!--   <dialog class="modal" id="modal">
                 <h2>You are Daruk!</h2>
-                <img src="images/Daruk-Botw.png" alt="Daruk">
+                <img src="images/daruk-botw.png" alt="Daruk">
                 <p> A very ambitious individual who becomes wildly excitable when in battle. Although he's usually very calm, he becomes very loud and ferocious when fighting. He is very courageous when it comes protecting the ones you love and extremely strong! </p> 
                 <button class="button close-button">close modal</button>
             </dialog>
-        </div>
+        </div> --> 
 
+    <div class="grid">
         <div class="grid-item">
-            <img id="taurus" class="button" src="images/Hestu-Botw.png" alt="Hestu">
-        </div>
-
-
-        <div class="grid-item">
-            <img id="gemini" class="button" src="images/Revali-Botw.png" alt="Revali">
+                <img id="aries" class="button" src="images/daruk-botw.png" alt="Daruk">
         </div>
         <div class="grid-item">
-            <img id="cancer" class="button" src="images/Mipha_Botw.png" alt="Mipha">
+                <img id="taurus" class="button" src="images/hestu-botw.png" alt="Hestu">
         </div>
         <div class="grid-item">
-            <img id="leo" class="button" src="images/Urbosa-Botw.png" alt="Urbosa">
+                <img id="gemini" class="button" src="images/revali-botw.png" alt="Revali">
         </div>
         <div class="grid-item">
-            <img id="virgo" class="button" src="images/Zelda-Botw.png" alt="Zelda">
+                <img id="cancer" class="button" src="images/mipha-botw.png" alt="Mipha">
         </div>
         <div class="grid-item">
-            <img id="libra" class="button" src="images/Impa-Botw.png" alt="Impa">
+                <img id="leo" class="button" src="images/urbosa-botw.png" alt="Urbosa">
         </div>
         <div class="grid-item">
-            <img id="scorpio" class="button" src="images/Riju-Botw.png" alt="Riju">
+                <img id="virgo" class="button" src="images/zelda-botw.png" alt="Zelda">
         </div>
         <div class="grid-item">
-            <img id="sagittarius" class="button" src="images/Sidon-Botw.png" alt="Sidon">
+                <img id="libra" class="button" src="images/impa-botw.png" alt="Impa">
         </div>
         <div class="grid-item">
-            <img id="capricorn" class="button" src="images/Link-Botw.png" alt="Link">
+                <img id="scorpio" class="button" src="images/riju-botw.png" alt="Riju">
         </div>
         <div class="grid-item">
-            <img id="aquarius" class="button" src="images/Robbie-Botw.png" alt="Robbie">
+                <img id="sagittarius" class="button" src="images/sidon-botw.png" alt="Sidon">
         </div>
         <div class="grid-item">
-            <img id="pisces" class="button" src="images/Purah-Botw.png" alt="Purah">
+                <img id="capricorn" class="button" src="images/link-botw.png" alt="Link">
+        </div>
+        <div class="grid-item">
+                <img id="aquarius" class="button" src="images/robbie-botw.png" alt="Robbie">
+        </div>
+        <div class="grid-item">
+                <img id="pisces" class="button" src="images/purah-botw.png" alt="Purah">
         </div>
       </div>
 
-      <dialog class="modal" id="modal">
+      <div class = "modal-container" id="modal_container">
+        <div class = "modal">
+            <h1 class="popup-header">Daruk</h1>
+            <audio id="daruk-audio">
+                <source src="audio/daruk.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <img src="images/daruk-botw.png" class="char-img" alt="Daruk Image">
+            <p> 
+                You are Daruk! A very ambitious individual who becomes wildly excitable when in battle. 
+                Although he's usually very calm, he becomes very loud and ferocious when fighting. 
+                He is very courageous when it comes protecting the ones you love and extremely strong!
+            </p>
+            <button id= "close"> 
+                Close Me
+            </button>
+        </div>
+      </div>
+<!--
+<div class="character-preview"> 
+    <div class= "preview" data-target="popup daruk">
+        <h1 class="popup-header">Daruk</h1>
+        <audio id="daruk-audio">
+            <source src="audio/daruk.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/daruk-botw.png" class="char-img" alt="Daruk Image">
+        <p> You are Daruk! A very ambitious individual who becomes wildly excitable when in battle. 
+            Although he's usually very calm, he becomes very loud and ferocious when fighting. 
+            He is very courageous when it comes protecting the ones you love and extremely strong!
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup hestu">
+        <h1 class="popup-header">Hestu</h1>
+        <audio id="hestu-audio">
+            <source src="audio/hestu.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/hestu-botw.png" class="char-img" alt="Hestu Image">
+        <p> 
+            You are Hestu! He had a very strong passion for music and dancing when it suits
+            him, often seen using his maracas and chanting. He can be absent-minded at times, 
+            which results in him having a habit of getting lost and often a target of the Koroks' 
+            pranks.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup revali">
+        <h1 class="popup-header">Revali</h1>
+        <audio id="revali-audio">
+            <source src="audio/revali.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/revali-botw.png" class="char-img" alt="Revali Image">
+        <p> 
+            You are Revali! Revali exudes confidence, often bordering on arrogance. 
+            He's fully aware of his skills as a warrior and a skilled archer. 
+            He has a competitive streak, especially when it comes to comparing 
+            himself to Link and takes pride in his abilities and expects respect from others 
+            and can become defensive if his pride is challenged.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup mipha">
+        <h1 class="popup-header">Mipha</h1>
+        <audio id="mipha-audio">
+            <source src="audio/mipha.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/mipha-botw.png" class="char-img" alt="Mipha Image">
+        <p> 
+            You are Mipha! Mipha is known for her kind and caring nature. She genuinely cares 
+            for others, especially for Link, whom she has known since childhood. Mipha's deep 
+            affection for Link is evident in her willingness to sacrifice herself to save him 
+            and her kingdom. Her selflessness is a defining aspect of her character.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup urbosa">
+        <h1 class="popup-header">Urbosa</h1>
+        <audio id="urbosa-audio">
+            <source src="audio/urbosa.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/urbosa-botw.png" class="char-img" alt="Urbosa Image">
+        <p> 
+            You are Urbosa! She exudes confidence and self-assurance in every aspect of her character. 
+            She's secure in her abilities as a warrior and a leader, and she commands respect from those around her. 
+            Urbosa is not afraid to speak her mind and assert herself when necessary. She is a decisive leader 
+            who takes charge of situations with authority. Despite her formidable exterior, Urbosa also has a compassionate side.
+            She cares deeply for her people and is willing to put herself in harm's way to defend them.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup zelda">
+        <h1 class="popup-header">Zelda</h1>
+        <audio id="urbosa-audio">
+            <source src="audio/zelda.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/zelda-botw.png" class="char-img" alt="Zelda Image">
+        <p> 
+            You are Zelda! Zelda is incredibly determined and driven, especially in her quest
+            to unlock her sealing powers and defeat Calamity Ganon. Zelda is highly intelligent 
+            and possesses a keen intellect. She is well-versed in ancient Sheikah technology and 
+            lore, using her knowledge to aid Link in his quest. As the princess of Hyrule, Zelda 
+            carries the weight of her kingdom's fate on her shoulders. Despite her royal status, 
+            Zelda is not immune to feelings of vulnerability and self-doubt. She struggles with the 
+            expectations placed upon her as the chosen hero and the pressure to live up to her family's 
+            legacy.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup impa">
+        <h1 class="popup-header">Impa</h1>
+        <audio id="impa-audio">
+            <source src="audio/impa.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/impa-botw.png" class="char-img" alt="Impa Image">
+        <p> 
+            You are Impa! Impa is dedicated to her role as a protector of the royal family 
+            and guardian of Hyrule's secrets. She takes her responsibilities seriously and 
+            is willing to do whatever it takes to ensure the safety of the kingdom. Impa is 
+            fiercely loyal to the royal family of Hyrule, particularly to Princess Zelda. She 
+            serves as a trusted advisor and confidante to the royal family, offering her support 
+            and guidance whenever needed. Impa is deeply committed to protecting Hyrule and its 
+            people from external threats, particularly the forces of darkness and evil. 
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup riju">
+        <h1 class="popup-header">Riju</h1>
+        <audio id="riju-audio">
+            <source src="audio/riju.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/riju-botw.png" class="char-img" alt="Riju Image">
+        <p> 
+            You are Riju! Despite her youth, Riju displays remarkable courage and resilience. 
+            She is unafraid to face danger head-on, especially when it threatens her people or 
+            her kingdom. Riju cares deeply for the well-being of her people, and she is willing 
+            to do whatever it takes to protect them. She shows kindness and empathy towards others, 
+            especially those in need.  As the leader of the Gerudo, Riju is determined to prove 
+            herself and earn the respect of her people. She takes her responsibilities seriously 
+            and works tirelessly to ensure the prosperity and safety of her kingdom.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup sidon">
+        <h1 class="popup-header">Sidon</h1>
+        <audio id="sidon-audio">
+            <source src="audio/sidon.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/sidon-botw.png" class="char-img" alt="Sidon Image">
+        <p> 
+            You are Sidon! Sidon is incredibly optimistic, always looking on the bright side 
+            of things even in the face of adversity. He maintains a positive attitude and 
+            encourages others to do the same. Sidon is highly charismatic and has a natural 
+            ability to charm those around him. His infectious enthusiasm and friendly demeanor 
+            make him well-liked among both his fellow Zoras and other inhabitants of Hyrule. 
+            Sidon is full of energy and enthusiasm, often seen bounding around with boundless 
+            energy. His dynamic personality adds a sense of liveliness to any situation he finds 
+            himself in.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup link">
+        <h1 class="popup-header">Link</h1>
+        <audio id="link-audio">
+            <source src="audio/link.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/link-botw.png" class="char-img" alt="Link Image">
+        <p> 
+            You are Link! Link demonstrates unwavering determination in his quest to fulfill 
+            his destiny and protect the land of Hyrule. Despite facing numerous challenges and 
+            setbacks, he persists in his mission to overcome adversity and restore peace to the 
+            kingdom. In many of the games, Link is portrayed as a silent protagonist, communicating 
+            through actions rather than words. This allows players to project their own emotions and 
+            intentions onto the character. Despite his stoic demeanor, Link often demonstrates 
+            compassion and empathy towards those in need. He forms meaningful connections with other 
+            characters and goes out of his way to help them in their times of need.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup robbie">
+        <h1 class="popup-header">Robbie</h1>
+        <audio id="robbie-audio">
+            <source src="audio/robbie.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/robbie-botw.png" class="char-img" alt="Robbie Image">
+        <p> 
+            You are Robbie! Robbie is a highly intelligent and inventive scientist, renowned 
+            for his groundbreaking research and technological innovations. He possesses a keen 
+            intellect and a deep understanding of ancient Sheikah technology. Robbie has a quirky 
+            and eccentric personality, often displaying unconventional behavior and mannerisms. 
+            He is known for his enthusiastic and energetic demeanor, which can sometimes come across 
+            as eccentric or peculiar. Robbie has a quirky sense of humor and often makes witty or 
+            sarcastic remarks. He has a playful side to his personality, which he occasionally displays 
+            through his interactions with others.
+        </p>
+    </div>
+
+    <div class="preview" data-target="popup purah">
+        <h1 class="popup-header">Purah</h1>
+        <audio id="purah-audio">
+            <source src="audio/purah.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <img class="esc-btn lighter hover" src="images/close-button.png" alt="close button">
+        <img src="images/purah-botw.png" class="char-img" alt="Purah Image">
+        <p> 
+            You are Purah! Purah has boundless energy and enthusiasm, often bouncing around 
+            with excitement and exuberance. She approaches everything with a sense of vitality 
+            and vigor. Purah has an insatiable curiosity and thirst for knowledge. She is deeply 
+            interested in ancient Sheikah technology and is constantly experimenting and tinkering 
+            with new inventions. Despite her youthful appearance, Purah is incredibly intelligent 
+            and gifted in the field of science and engineering. She is responsible for many 
+            breakthroughs in Sheikah technology, including the creation of the Guidance Stone.
+        </p>
+    </div>
+</div>
+
+         <dialog class="modal" id="modal">
         <h2>An interesting title</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus ipsam?</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
@@ -89,8 +337,7 @@
           <label>Your email <input type="email"></label>
           <button class="button" type="submit">submit form</button>
         </form>
-      
-      </dialog>
+      </dialog> -->
     <script src="js/main.js"></script>
 </body>
 </html>
